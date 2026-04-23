@@ -14,14 +14,14 @@ mydb = mysql.connector.connect(
 )
 
 @app.route('/productos')
-def productos():
+def buscarProductos():
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM productos")
     myresult = mycursor.fetchall()
     return make_response(jsonify(myresult))
 
 @app.post('/producto')
-def producto():
+def agregarProducto():
     mycursor = mydb.cursor()
     sql = "INSERT INTO productos (nombre, categoria, precio, existencias) VALUES (%s, %s, %s, %s)"
     val = (request.form['txtNombre'], request.form['cboCategoria'], request.form['txtPrecio'], request.form['txtExistencias'])
