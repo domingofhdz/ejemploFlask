@@ -11,7 +11,7 @@ def productos():
     mydb = mysql.connector.connect(
         host="46.28.42.226",
         user="u760464709_prueba_usr",
-        password="|Au/mc*H2jH3",
+        password="F7Ldev4h~l",
         database="u760464709_prueba_bd"
     )
 
