@@ -20,7 +20,7 @@ def buscarProductos():
     return make_response(jsonify(myresult))
 
 @app.post('/producto')
-    def agregarProducto():
+def agregarProducto():
     import mysql.connector
     mydb = mysql.connector.connect(
         host="46.28.42.226",
